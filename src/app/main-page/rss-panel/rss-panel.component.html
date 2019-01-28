@@ -1,0 +1,20 @@
+<div *ngIf="!onready" class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="onready">
+  <div class=" bd-highlight m-4 d-flex flex-row flex-wrap my-flex-container">
+    <div *ngFor="let entry of rss">
+      <div *ngFor="let entry2 of entry.items" class="rssCont m-2 bd-highlight  d-inline-block">
+        <div id="feedTopPanel" class="p-3">
+          <a href="{{entry2.link}}" class="fa fa-external-link-alt text-white d-inline p-2"></a>
+          <p id="feedSrc" class="d-inline">{{entry.feed.title}} </p>
+          <p id="feedDate" class="d-inline float-right mt-1">{{entry2.pubDate | date:'MMM-dd-yyyy | HH:mm'}}</p>
+        </div>
+        <img src="{{entry2.thumbnail}}">
+        <h5 class="pr-4 pl-4 mt-2" id="feedTitle">{{entry2.title}}</h5>
+        <p id="feedDesc" class="pr-4 pl-4 font-weight-bold">{{entry2.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

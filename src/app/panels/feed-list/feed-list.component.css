@@ -1,0 +1,63 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+mat-sidenav{
+  background-color: #585e6a;
+  width: 20%;
+  padding: 80px 0 80px 0;
+}
+.FeedInput{
+  border-radius: 20px;
+  background-color: #475055;
+  padding-left: 15px;
+  width: 80%;
+  border-style: solid;
+  border-color: #727983;
+  margin: 10px 0 10px 0;
+}
+#leftNavTitle{
+  padding-bottom: 50px;
+  color: #9fa6ac;
+  font-weight: 400;
+}
+#addFeedBtn{
+  background-color: #59abe5;
+  width:80%;
+  border-radius: 20px;
+  margin: 10px 0 10px 0;
+  border: none;
+}
+#addFeedBtn:hover {
+  background-color: #4d8abb;
+}
+hr{
+  background-color: grey;
+  height: 1px;
+  width: 85%;
+}
+#filterFeedInput{
+  width: 70%;
+}
+.fa-times-circle{
+  color: #dbaa99;
+}
+#deleteFeed{
+  float: right;
+  background: transparent;
+  border: none;
+}
+#deleteFeed:hover{
+  cursor: pointer;
+}
+.selectFeed{
+  float: left;
+}
+#myFeed{
+  width: 90%;
+
+}

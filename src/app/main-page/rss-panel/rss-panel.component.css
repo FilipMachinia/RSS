@@ -1,0 +1,49 @@
+.rssCont{
+  background-color: white;
+  box-shadow: 5px 5px 10px #c3c9cd;
+  vertical-align: top;
+  width: 25%;
+}
+@media only screen and (max-width: 1300px){
+  .rssCont{
+    width: 40%;
+  }
+  #feedSrc{
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 900px){
+  .rssCont{
+    width: 70%;
+  }
+  #feedSrc{
+    font-size: 11px;
+  }
+  #feedDate{
+    display: none !important;
+  }
+}
+#feedTitle{
+  color: #9fa6ac;
+}
+#feedDate{
+  font-size: 12px;
+}
+#feedSrc{
+  color: dodgerblue;
+  font-weight: bold;
+  font-size: 15px;
+}
+#feedTopPanel{
+  color: white;
+  max-height: 300px;
+  background-color: #475055
+}
+#feedDesc{
+  height: 3em;
+  line-height: 1em;
+  overflow: hidden;
+}
+img{
+  max-width: 100%;
+}

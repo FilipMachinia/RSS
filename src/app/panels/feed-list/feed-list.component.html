@@ -1,0 +1,14 @@
+<input class="FeedInput " #filterFeedInput id="filterFeedInput" (input)="filterFeeds(filterFeedInput.value)" placeholder="Filter your feeds...">
+<p class="fas fa-lg fa-search p-2 ml-3"></p>
+<ul>
+  <li id="myFeed" class="d-block mt-2" *ngFor="let entry of filteredfeeds;let i = index">
+    <input id="{{i}}" type="checkbox" (click)="showFeed(entry.link, i)" class="selectFeed d-inline-block checkbox checkbox-info checkbox-circle">
+    <p class="d-inline-block">{{entry.name}}</p>
+    <button id="deleteFeed" (click)="deleteFeed(entry)" class="fas fa-times-circle fa-lg d-inline-block"></button>
+  </li>
+</ul>
+<hr>
+<p>Add a new feed</p>
+<input class="FeedInput" [(ngModel)]="name" placeholder="Type your feed name...">
+<input class="FeedInput" [(ngModel)]="link" placeholder="Copy your RSS url...">
+<button id="addFeedBtn" (click)="addFeeds(name,link)" class="btn btn-primary">Add feed</button>

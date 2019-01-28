@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Lato, Arial, sans-serif;
+  margin: 0;
+  color: white;
+  background-color: #edeef2;
+}
+
+input, input[type='checkbox'], textarea, select {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 15px;
+  border: 2px solid #555;
+}
+
+input[type='checkbox']:checked {
+  background: #abd;
+}
