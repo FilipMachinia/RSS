@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Feed} from '../../models/feed';
 import {MyFeed} from '../../models/myFeed';
-import {GetRssService} from '../../main-page/getRss/get-rss.service';
+import {GetRssService} from '../../getRss/get-rss.service';
 
 @Component({
   selector: 'app-feed-list',
@@ -46,11 +46,11 @@ export class FeedListComponent implements OnInit {
   showFeed(entryLink: string, id) {
     let isBtnChecked = (<HTMLInputElement>document.getElementById(id)).checked;
     if (!isBtnChecked) {
-      console.log('remove');
       this.getRssService.hideFeed(entryLink);
     } else {
       this.getRssService.getFeedContent(entryLink).subscribe((res: Feed) => {
-        this.getRssService.getFeeds().push(res);
+        this.getRssService.addFeed(res);
+
       });
     }
   }

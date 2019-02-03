@@ -1,5 +1,5 @@
 # Rss
-Small RSS feed project. It allows to add, filter and display rss. 
+Small RSS feed project. It allows to add, filter, hide and display rss. 
 
 Responsive design looks good on desktops, laptops and tablets. Mobile view needs a bit more work.
 
@@ -16,10 +16,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 * FontAwesome
 
 ## Production
-For production run ng `build --prod`.
-
-## Known issues
-Deleting rss doesn't update the view and its commented out.
+For production run `ng build --prod`.
 
 ## Credits 
 * function filterFeeds() taken from `//https://stackoverflow.com/questions/40678206/angular-2-filter-search-list`

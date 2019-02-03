@@ -2,9 +2,11 @@
   <span class="sr-only">Loading...</span>
 </div>
 
-<div *ngIf="onready">
+<div *ngIf="onready && displayedRss; else file">
+
+
   <div class=" bd-highlight m-4 d-flex flex-row flex-wrap my-flex-container">
-    <div *ngFor="let entry of rss">
+    <div *ngFor="let entry of displayedRss">
       <div *ngFor="let entry2 of entry.items" class="rssCont m-2 bd-highlight  d-inline-block">
         <div id="feedTopPanel" class="p-3">
           <a href="{{entry2.link}}" class="fa fa-external-link-alt text-white d-inline p-2"></a>
@@ -18,3 +20,6 @@
     </div>
   </div>
 </div>
+<ng-template #file>
+  <p class="far fa-5x fa-file"></p>
+</ng-template>

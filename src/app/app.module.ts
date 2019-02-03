@@ -3,18 +3,20 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {MaterialModule} from './material/material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {PanelsModule} from './panels/panels/panels.module';
-import {MainPageModule} from './main-page/main-page/main-page.module';
+import {LeftPanelModule} from './leftPanel/leftPanel.module';
+import {MainPageModule} from './mainPage/mainPage.module';
 import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    PanelsModule,
+    LeftPanelModule,
     MainPageModule,
     MaterialModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   declarations: [
     AppComponent
